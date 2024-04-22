@@ -1,54 +1,54 @@
 import greenfoot.*;
 
 public class Player extends Actor {
-    private static final int MAX_JUMP_STRENGTH = 20;
+    private static final int MAX_JUMP_STRENGTH = 12;
     private static final double GRAVITY = 0.2;
     
     private boolean isJumping = false;
     private boolean isChargingJump = false;
     private double horizontalVelocity = 0; 
     private double verticalVelocity = 0;
-    private int chargeTime = 0;
-    
+    private double chargeTime = 0;
+    private double direction = 0;
     public void act() {
         inputKey();
         applyPhysics();
     }
     
     private void inputKey() {
-        // Charging Jump
+        
+        if (Greenfoot.isKeyDown("a")) 
+        {
+            direction += -0.5;
+        }
+        else if (Greenfoot.isKeyDown("d")) 
+        {
+            direction += 0.5;
+        }
         if (Greenfoot.isKeyDown("space")) {
             if (!isJumping) {
                 isChargingJump = true;
-                chargeTime++;
+                chargeTime += 0.5;
             }
         } else if (isChargingJump) {
-            jump();
+            jump(direction);
         }
         
         // Direction of jump
-        if (isChargingJump) {
-            int direction = 0;
-            if (Greenfoot.isKeyDown("a")) {
-                direction = -1;
-            }else if (Greenfoot.isKeyDown("d")) {
-                direction = 1;
-            }if (direction != 0) {
-                jump(direction);
-            }
-        }
+        
+            
+        
     }
     
     private void jump() {
         isJumping = true;
         isChargingJump = false;
-        int strength = Math.min(chargeTime, MAX_JUMP_STRENGTH);
-        horizontalVelocity = 0;
+        double strength = Math.min(chargeTime, MAX_JUMP_STRENGTH);
         verticalVelocity = -strength * 0.75;
         chargeTime = 0;
     }
     
-    private void jump(int direction) {
+    private void jump(double direction) {
         jump();
         horizontalVelocity = direction * 2;
     }
@@ -61,6 +61,7 @@ public class Player extends Actor {
             isJumping = false;
             verticalVelocity = 0;
             horizontalVelocity = 0;
+            direction = 0;
             setLocation(getX(), getY() - 1);
         }
     }

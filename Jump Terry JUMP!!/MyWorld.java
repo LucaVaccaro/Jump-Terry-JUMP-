@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(640, 360, 1); 
         prepare();
     }
     
@@ -53,5 +53,7 @@ public class MyWorld extends World
         addObject(ground11,502,389);
         Ground ground12 = new Ground();
         addObject(ground12,581,382);
+        Ground ground13 = new Ground();
+        addObject(ground13,638,359);
     }
 }
