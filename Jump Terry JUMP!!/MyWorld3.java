@@ -1,25 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld2 here.
+ * Write a description of class MyWorld3 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld2 extends WorldTrackPlayer
+public class MyWorld3 extends WorldTrackPlayer
 {
 
     /**
-     * Constructor for objects of class MyWorld2.
+     * Constructor for objects of class MyWorld3.
      * 
      */
-    public MyWorld2()
+    public MyWorld3()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(); 
         prepare();
     }
-    public MyWorld2(int x , int y, Player p)
+    public MyWorld3(int x , int y, Player p)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(x,y,p); 
@@ -89,7 +89,54 @@ public class MyWorld2 extends WorldTrackPlayer
         ground2.setLocation(522,159);
         ground4.setLocation(231,170);
         ground4.setLocation(223,184);
-        ladder.setLocation(585,87);
-        ladder.setLocation(576,132);
+        removeObject(ground3);
+        removeObject(ground4);
+        removeObject(ground2);
+        ground.setLocation(428,303);
+        ladder.setLocation(68,125);
+        removeObject(ladder);
+        ground2.setLocation(140,126);;
+        ground3.setLocation(523,46);
+        ground2.setLocation(150,135);
+        ground2.setLocation(79,152);
+        ground3.setLocation(550,45);
+        ladder.setLocation(318,126);
+        ladder.setLocation(352,110);
+        ladder.setLocation(386,111);
+        ground2.setLocation(135,174);
+        Ground ground6 = new Ground();
+        addObject(ground6,146,162);
+        ground6.setLocation(143,158);
+        Ladder ladder2 = new Ladder();
+        addObject(ladder2,372,128);
+        ladder2.setLocation(384,131);
+        Ground ground7 = new Ground();
+        addObject(ground7,529,69);
+        ground7.setLocation(516,78);
+        ladder2.setLocation(413,127);
+        ground6.setLocation(161,168);
+        ladder2.setLocation(414,125);
+        ground7.setLocation(542,63);
+        ladder2.setLocation(428,100);
+        ladder2.setLocation(447,86);
+        ground7.setLocation(517,62);
+        ladder2.setLocation(431,67);
+        ladder2.setLocation(429,78);
+        ground7.setLocation(514,51);
+        ladder2.setLocation(421,108);
+        ground6.setLocation(167,165);
+        ladder2.setLocation(404,113);
+        ladder2.setLocation(409,106);
+        ground7.setLocation(558,55);
+        ladder2.setLocation(433,73);
+        ladder2.setLocation(418,120);
+        ground.setLocation(380,334);
+        ground6.setLocation(157,174);
+        ladder2.setLocation(405,142);
+        ground6.setLocation(151,178);
+        ladder2.setLocation(387,134);
+        ground.setLocation(440,330);
+        ladder2.setLocation(408,129);
+        ground.setLocation(454,337);
     }
 }

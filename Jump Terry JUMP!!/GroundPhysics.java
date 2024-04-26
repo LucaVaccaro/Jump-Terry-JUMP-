@@ -1,7 +1,7 @@
 import greenfoot.*;
 
-public class Ground extends GroundPhysics {
-    public Ground() {
+public class GroundPhysics extends Actor {
+    public GroundPhysics() {
         GreenfootImage image = new GreenfootImage(100, 20); // Adjust width and height as needed
         image.setColor(Color.GREEN); // Adjust color as needed
         image.fill();

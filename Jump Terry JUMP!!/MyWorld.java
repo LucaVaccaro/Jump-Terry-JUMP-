@@ -33,6 +33,7 @@ public class MyWorld extends WorldTrackPlayer
             Greenfoot.setWorld(new MyWorld2(player.getX(), getHeight() - 10, player));
         }
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -67,5 +68,49 @@ public class MyWorld extends WorldTrackPlayer
         addObject(ground12,581,382);
         Ground ground13 = new Ground();
         addObject(ground13,638,359);
+        removeObject(ground);
+        removeObject(ground2);
+        Player player = new Player();
+        addObject(player,111,323);
+        removeObject(player);
+        Ground ground14 = new Ground();
+        addObject(ground14,426,236);
+        ground14.setLocation(200,253);
+        Ground ground15 = new Ground();
+        addObject(ground15,200,253);
+        ground15.setLocation(398,239);
+        ground14.setLocation(243,261);
+        ground15.setLocation(506,129);
+        Ladder ladder = new Ladder();
+        addObject(ladder,218,67);
+        ladder.setLocation(211,68);
+        ladder.setLocation(168,97);
+        ground15.setLocation(552,147);
+        ladder.setLocation(206,93);
+        ladder.setLocation(206,88);
+        ground14.setLocation(292,251);
+        ladder.setLocation(216,108);
+        ladder.setLocation(206,100);
+        Ladder ladder2 = new Ladder();
+        addObject(ladder2,206,100);
+        ladder.setLocation(93,123);
+        ladder.setLocation(227,76);
+        ladder2.setLocation(1023,223);
+        removeObject(ladder2);
+        ladder.setLocation(166,8);
+        ladder.setLocation(162,15);
+        ladder.setLocation(164,17);
+        ladder.setLocation(83,67);
+        ladder.setLocation(73,75);
+        ground14.setLocation(271,245);
+        ladder.setLocation(77,90);
+        ground14.setLocation(328,256);
+        ground15.setLocation(463,114);
+        ground14.setLocation(336,252);
+        ladder.setLocation(116,72);
+        ladder.setLocation(73,90);
+        ground14.setLocation(267,302);
+        ground15.setLocation(473,174);
+        ladder.setLocation(58,116);
     }
 }
