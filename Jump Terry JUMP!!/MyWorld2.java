@@ -32,10 +32,13 @@ public class MyWorld2 extends WorldTrackPlayer
      public void checkPlayerPosition()
     {
         if (player.getY() >= getHeight() - 10 && player.getVerticalVelocity() >= 0)
-        {
+        {   
             Greenfoot.setWorld(new MyWorld(player.getX(), 0, player));
         }
-        
+        if (player.getY() <= 0 && player.getVerticalVelocity() <= 0)
+        {
+            Greenfoot.setWorld(new MyWorld3(player.getX(), getHeight() - 10, player));
+        }
     }
     
     /**
