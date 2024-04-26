@@ -63,6 +63,10 @@ public class Player extends Actor {
         }
     }
     
+    public double getVerticalVelocity() {
+        return verticalVelocity;
+    }
+    
     private boolean isOnGround() {
         Actor ground = getOneObjectAtOffset(0, getImage().getHeight() / 2, Ground.class);
         return ground != null;

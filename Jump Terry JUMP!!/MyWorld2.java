@@ -31,13 +31,9 @@ public class MyWorld2 extends WorldTrackPlayer
     }
      public void checkPlayerPosition()
     {
-        if( player != null)
+        if (player.getY() >= getHeight() - 10 && player.getVerticalVelocity() >= 0)
         {
-            if (player.getX() > getWidth() - 10)
-            {
-            
-                Greenfoot.setWorld( new MyWorld(10, player.getY(),player));
-            }
+            Greenfoot.setWorld(new MyWorld(player.getX(), 0, player));
         }
         
     }
@@ -51,28 +47,6 @@ public class MyWorld2 extends WorldTrackPlayer
         addObject(ground,106,310);
         Ground ground2 = new Ground();
         addObject(ground2,426,217);  
-        Ground ground3 = new Ground();
-        addObject(ground3,26,382);
-        Ground ground4 = new Ground();
-        addObject(ground4,125,371);
-        Ground ground5 = new Ground();
-        addObject(ground5,199,389);
-        Ground ground6 = new Ground();
-        addObject(ground6,272,390);
-        Ground ground7 = new Ground();
-        addObject(ground7,361,367);
-        Ground ground8 = new Ground();
-        addObject(ground8,346,388);
-        ground7.setLocation(355,374);
-        Ground ground9 = new Ground();
-        addObject(ground9,355,374);
-        Ground ground10 = new Ground();
-        addObject(ground10,426,379);
-        Ground ground11 = new Ground();
-        addObject(ground11,502,389);
-        Ground ground12 = new Ground();
-        addObject(ground12,581,382);
-        Ground ground13 = new Ground();
-        addObject(ground13,638,359);
+
     }
 }
