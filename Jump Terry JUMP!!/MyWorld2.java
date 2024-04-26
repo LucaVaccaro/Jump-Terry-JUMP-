@@ -1,37 +1,45 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Write a description of class MyWorld2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends WorldTrackPlayer
+public class MyWorld2 extends WorldTrackPlayer
 {
-    
+
     /**
-     * Constructor for objects of class MyWorld.
+     * Constructor for objects of class MyWorld2.
      * 
      */
-    public MyWorld()
+    public MyWorld2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(); 
         prepare();
     }
-    public MyWorld(int x, int y, Player p )
+    public MyWorld2(int x , int y, Player p)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(x,y,p); 
         prepare();
     }
-    
+    public void act()
+    {
+        checkPlayerPosition();
+    }
      public void checkPlayerPosition()
     {
-        if (player.getX() > getWidth() - 10)
+        if( player != null)
         {
-            Greenfoot.setWorld( new MyWorld2(10, player.getY(),player));
+            if (player.getX() > getWidth() - 10)
+            {
+            
+                Greenfoot.setWorld( new MyWorld(10, player.getY(),player));
+            }
         }
+        
     }
     /**
      * Prepare the world for the start of the program.
@@ -42,8 +50,7 @@ public class MyWorld extends WorldTrackPlayer
         Ground ground = new Ground();
         addObject(ground,106,310);
         Ground ground2 = new Ground();
-        addObject(ground2,426,217);
-
+        addObject(ground2,426,217);  
         Ground ground3 = new Ground();
         addObject(ground3,26,382);
         Ground ground4 = new Ground();

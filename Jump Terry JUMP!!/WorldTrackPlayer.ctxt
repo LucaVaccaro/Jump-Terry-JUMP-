@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=WorldTrackPlayer
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ WorldKeepPlayer\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=x\ y\ p
+comment1.target=WorldTrackPlayer(int,\ int,\ Player)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ WorldKeepPlayer.\r\n\ \r\n
+comment2.params=
+comment2.target=WorldTrackPlayer()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ checkPlayerPosition()
+numComments=5

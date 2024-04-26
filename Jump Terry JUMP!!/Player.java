@@ -2,7 +2,7 @@ import greenfoot.*;
 
 public class Player extends Actor {
     private static final int MAX_JUMP_STRENGTH = 12;
-    private static final double GRAVITY = 0.2;
+    private static final double GRAVITY = 0.3;
     
     private boolean isJumping = false;
     private boolean isChargingJump = false;
@@ -14,7 +14,7 @@ public class Player extends Actor {
         inputKey();
         applyPhysics();
     }
-    
+   
     private void inputKey() {
         
         if (Greenfoot.isKeyDown("a")) 
@@ -35,9 +35,6 @@ public class Player extends Actor {
         }
         
         // Direction of jump
-        
-            
-        
     }
     
     private void jump() {
