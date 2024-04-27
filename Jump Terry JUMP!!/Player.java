@@ -43,6 +43,8 @@ public class Player extends Actor {
         double strength = Math.min(chargeTime, MAX_JUMP_STRENGTH);
         verticalVelocity = -strength * 0.75;
         chargeTime = 0;
+        
+        Greenfoot.playSound("jump_Sound.wav");
     }
     
     private void jump(double direction) {
