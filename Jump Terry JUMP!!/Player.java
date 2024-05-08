@@ -1,20 +1,38 @@
 import greenfoot.*;
 
 public class Player extends Actor {
-    private static final int MAX_JUMP_STRENGTH = 12;
-    private static final double GRAVITY = 0.2;
+    public static final int MAX_JUMP_STRENGTH = 12;
+    public int maxJumpStrength = 12;
+    private static final double gravity = 0.2;
     
     private boolean isJumping = false;
     private boolean isChargingJump = false;
     private double horizontalVelocity = 0; 
     private double verticalVelocity = 0;
-    private double chargeTime = 0;
+    public double chargeTime = 0;
     private double direction = 0;
-    public void act() {
+    public PowerUpSimulator powerUp;
+    boolean isVPressed = false;
+    public void act() 
+    {
         inputKey();
         applyPhysics();
+         if (Greenfoot.isKeyDown("v")) 
+        {
+            isVPressed = true;
+        }
+        else if (isVPressed && !Greenfoot.isKeyDown("v"))
+        {
+            powerUp = new JumpPowerUp();
+            getWorld().addObject(powerUp,getX(),getY());
+            isVPressed = false;
+        }
+        if (powerUp != null)
+        {
+            powerUp.setLocation(getX(), getY());
+        }
     }
-   
+    
     private void inputKey() {
         
         if (Greenfoot.isKeyDown("a")) 
@@ -40,7 +58,7 @@ public class Player extends Actor {
     private void jump() {
         isJumping = true;
         isChargingJump = false;
-        double strength = Math.min(chargeTime, MAX_JUMP_STRENGTH);
+        double strength = Math.min(chargeTime, maxJumpStrength);
         verticalVelocity = -strength * 0.75;
         chargeTime = 0;
         
@@ -54,7 +72,7 @@ public class Player extends Actor {
     
     private void applyPhysics() {
         setLocation(getX() + (int)horizontalVelocity, getY() + (int)verticalVelocity);
-        verticalVelocity += GRAVITY;
+        verticalVelocity += gravity;
         
         if (isOnGround()) {
             isJumping = false;
