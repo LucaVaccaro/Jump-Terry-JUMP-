@@ -11,36 +11,18 @@ public class Player extends Actor {
     private double verticalVelocity = 0;
     public double chargeTime = 0;
     private double direction = 0;
-    public PowerUpSimulator powerUp;
-    boolean isVPressed = false;
+    
     public void act() 
     {
         inputKey();
         applyPhysics();
-         if (Greenfoot.isKeyDown("v")) 
-        {
-            isVPressed = true;
-        }
-        else if (isVPressed && !Greenfoot.isKeyDown("v"))
-        {
-            powerUp = new JumpPowerUp();
-            getWorld().addObject(powerUp,getX(),getY());
-            isVPressed = false;
-        }
-        if (powerUp != null)
-        {
-            powerUp.setLocation(getX(), getY());
-        }
+        checkPowerUp();
     }
     
     private void inputKey() {
-        
-        if (Greenfoot.isKeyDown("a")) 
-        {
+        if (Greenfoot.isKeyDown("a")) {
             direction += -0.5;
-        }
-        else if (Greenfoot.isKeyDown("d")) 
-        {
+        } else if (Greenfoot.isKeyDown("d")) {
             direction += 0.5;
         }
         if (Greenfoot.isKeyDown("space")) {
@@ -51,8 +33,6 @@ public class Player extends Actor {
         } else if (isChargingJump) {
             jump(direction);
         }
-        
-        // Direction of jump
     }
     
     private void jump() {
@@ -61,8 +41,6 @@ public class Player extends Actor {
         double strength = Math.min(chargeTime, maxJumpStrength);
         verticalVelocity = -strength * 0.75;
         chargeTime = 0;
-        
-        Greenfoot.playSound("jump_Sound.wav");
     }
     
     private void jump(double direction) {
@@ -83,12 +61,30 @@ public class Player extends Actor {
         }
     }
     
-    public double getVerticalVelocity() {
-        return verticalVelocity;
+    public void setMaxJumpStrength(int strength) {
+        maxJumpStrength = strength;
     }
     
     private boolean isOnGround() {
         Actor ground = getOneObjectAtOffset(0, getImage().getHeight() / 2, Ground.class);
         return ground != null;
+    }
+    
+      public double getVerticalVelocity() {
+        return verticalVelocity;
+    }
+    
+    private void checkPowerUp() {
+        if (isTouching(JumpPowerUp.class)) {
+            JumpPowerUp powerUp = (JumpPowerUp)getOneIntersectingObject(JumpPowerUp.class);
+            if (powerUp != null) {
+                powerUp.applyPowerUp();
+                getWorld().removeObject(powerUp);
+            }
+        }
+    }
+    
+      public int getMaxJumpStrength() {
+        return maxJumpStrength;
     }
 }
