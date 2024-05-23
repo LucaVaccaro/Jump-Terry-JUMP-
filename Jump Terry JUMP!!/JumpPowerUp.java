@@ -16,7 +16,6 @@ public class JumpPowerUp extends PowerUpSimulator
     public void PowerUp()
     {
         player.maxJumpStrength = 24;
-        //player.chargeTime = 3;
     }
      public void PowerDown()
     {

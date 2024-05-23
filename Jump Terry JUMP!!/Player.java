@@ -1,6 +1,9 @@
 import greenfoot.*;
 
 public class Player extends Actor {
+    GreenfootImage image1;
+    GreenfootImage image2;
+    
     public static final int MAX_JUMP_STRENGTH = 12;
     public int maxJumpStrength = 12;
     private static final double gravity = 0.2;
@@ -13,11 +16,16 @@ public class Player extends Actor {
     private double direction = 0;
     public PowerUpSimulator powerUp;
     boolean isVPressed = false;
+    public Player()
+    {
+        image1 = new GreenfootImage("terryNormal.png"); 
+        image2 = new GreenfootImage("terryCrouching.png");
+    }
     public void act() 
     {
         inputKey();
         applyPhysics();
-         if (Greenfoot.isKeyDown("v")) 
+        if (Greenfoot.isKeyDown("v")) 
         {
             isVPressed = true;
         }
@@ -47,9 +55,11 @@ public class Player extends Actor {
             if (!isJumping) {
                 isChargingJump = true;
                 chargeTime += 0.5;
+                setImage(image2);
             }
         } else if (isChargingJump) {
             jump(direction);
+            setImage(image1);
         }
         
         // Direction of jump
@@ -62,7 +72,7 @@ public class Player extends Actor {
         verticalVelocity = -strength * 0.75;
         chargeTime = 0;
         
-        Greenfoot.playSound("jump_Sound.wav");
+        //Greenfoot.playSound();
     }
     
     private void jump(double direction) {
