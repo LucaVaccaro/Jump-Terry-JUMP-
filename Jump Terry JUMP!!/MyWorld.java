@@ -1,13 +1,9 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MyWorld extends WorldTrackPlayer
 {
+    private GreenfootImage powerUpIndicatorImage;
+    private Actor powerUpIndicator;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -26,14 +22,25 @@ public class MyWorld extends WorldTrackPlayer
         prepare();
     }
     
-     public void checkPlayerPosition()
+    public void checkPlayerPosition()
     {
         if (player.getY() <= 0 && player.getVerticalVelocity() <= 0)
         {
             Greenfoot.setWorld(new MyWorld2(player.getX(), getHeight() - 10, player));
+            deactivatePowerUp();
         }
     }
     
+    public void deactivatePowerUp() {
+        // Check if the player has a power-up and deactivate it if necessary
+        if (player != null && player.getMaxJumpStrength() > Player.MAX_JUMP_STRENGTH) {
+            player.setMaxJumpStrength(Player.MAX_JUMP_STRENGTH);
+            // Optionally, remove the power-up indicator from the world
+            if (powerUpIndicator != null) {
+                removeObject(powerUpIndicator);
+            }
+        }
+    }
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
