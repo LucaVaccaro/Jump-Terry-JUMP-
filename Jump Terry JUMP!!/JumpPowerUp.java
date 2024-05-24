@@ -39,6 +39,7 @@ public class JumpPowerUp extends PowerUpSimulator
         if (player != null) {
             player.setMaxJumpStrength(24);
             showIndicator();
+            Greenfoot.playSound("powerUp.wav");
         }
     }
     

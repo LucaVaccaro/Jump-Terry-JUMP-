@@ -2,9 +2,7 @@ import greenfoot.*;
 
 public class Ground extends GroundPhysics {
     public Ground() {
-        GreenfootImage image = new GreenfootImage(100, 20); // Adjust width and height as needed
-        image.setColor(Color.GREEN); // Adjust color as needed
-        image.fill();
+        GreenfootImage image = new GreenfootImage("Floor.png"); 
         setImage(image);
     }
     

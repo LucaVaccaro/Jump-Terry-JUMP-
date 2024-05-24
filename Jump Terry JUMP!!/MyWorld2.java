@@ -47,6 +47,7 @@ public class MyWorld2 extends WorldTrackPlayer
             }
         }
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -99,6 +100,42 @@ public class MyWorld2 extends WorldTrackPlayer
         ground4.setLocation(231,170);
         ground4.setLocation(223,184);
         ladder.setLocation(585,87);
-        ladder.setLocation(576,132);
+        ladder.setLocation(110,150);
+        ladder.setLocation(76,105);
+        ground4.setLocation(254,187);
+        ground4.setLocation(237,173);
+        removeObject(ground4);
+        removeObject(ground3);
+        ladder.setLocation(105,105);
+        ladder.setLocation(301,209);
+        ladder.setLocation(301,209);
+        ladder.setLocation(311,213);
+        ground2.setLocation(551,101);
+        metalPlatform metalPlatform = new metalPlatform();
+        addObject(metalPlatform,382,332);
+        removeObject(ground);
+        metalPlatform.setLocation(83,304);
+        ground2.setLocation(538,98);
+        removeObject(ground2);
+        metalPlatform.setLocation(545,77);
+        metalPlatform.setLocation(538,81);
+        boxPlatform boxPlatform = new boxPlatform();
+        addObject(boxPlatform,106,315);
+        Box box = new Box();
+        addObject(box,62,280);
+        box.setLocation(38,277);
+        metalPlatform.setLocation(586,77);
+        boxPlatform.setLocation(24,308);
+        box.setLocation(27,270);
+        box.setLocation(9,291);
+        ladder.setLocation(346,175);
+        metalPlatform.setLocation(559,73);
+        metalPlatform.setLocation(571,76);
+        metalPlatform.setLocation(532,71);
+        boxPlatform.setLocation(109,276);
+        box.setLocation(52,247);
+        boxPlatform.setLocation(42,285);
+        box.setLocation(88,253);
+        box.setLocation(86,254);
     }
 }

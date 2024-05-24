@@ -1,11 +1,11 @@
 #BlueJ class context
-comment0.target=MyWorld3
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld3\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.target=MyWorld7
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld7\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=MyWorld3()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld3.\r\n\ \r\n
+comment1.target=MyWorld7()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld7.\r\n\ \r\n
 comment2.params=x\ y\ p
-comment2.target=MyWorld3(int,\ int,\ Player)
+comment2.target=MyWorld7(int,\ int,\ Player)
 comment3.params=
 comment3.target=void\ act()
 comment4.params=
