@@ -1,11 +1,11 @@
 import greenfoot.*;
 
-public class JumpPowerUp extends Actor
+public class JumpPowerUp extends PowerUpSimulator
 {
     private Player player;
     private GreenfootImage indicatorImage; // Image for the indicator
     
-<<<<<<< HEAD
+
     /**
      * Act - do whatever the JumpPowerUp wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -13,12 +13,13 @@ public class JumpPowerUp extends Actor
     public void PowerUp()
     {
         player.maxJumpStrength = 24;
-=======
-    public JumpPowerUp() {
+    }
+    public JumpPowerUp() 
+    {
         GreenfootImage image = new GreenfootImage("Soda_power_up.png"); // Assuming "jump_powerup.png" is the image file for the power-up
         setImage(image);
         indicatorImage = new GreenfootImage("walking_cane.png"); // Assuming "powerup_indicator.png" is the image file for the indicator
->>>>>>> 2ef59818d1688428cd2d09fc98bbd856011a5a1b
+
     }
     
     public void act() 

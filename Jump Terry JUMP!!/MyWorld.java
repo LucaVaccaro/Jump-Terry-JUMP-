@@ -41,6 +41,7 @@ public class MyWorld extends WorldTrackPlayer
             }
         }
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -119,5 +120,7 @@ public class MyWorld extends WorldTrackPlayer
         ground14.setLocation(267,302);
         ground15.setLocation(473,174);
         ladder.setLocation(58,116);
+        JumpPowerUp jumpPowerUp = new JumpPowerUp();
+        addObject(jumpPowerUp,472,129);
     }
 }

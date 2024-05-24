@@ -17,9 +17,9 @@ public class SplashScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 360, 1); 
-        showText("420-141-VA GAME PROGRAMMING 1 section 00001", getWidth()/2, 60);
+        showText("420-141-VA GAME PROGRAMMING 1", getWidth()/2, 60);
         showText("Team Members: Sean Lussier, Luca Vaccaro, Andrew Godward, Dilpreet Singh", getWidth()/2, 85);
-        showText("Press Space Bar or wait 3 secvonds to start the game.", getWidth()/2, 110);
+        showText("Press Space Bar or wait 3 seconds to start the game.", getWidth()/2, 110);
         prepare();
     }
     public void act()
@@ -41,6 +41,7 @@ public class SplashScreen extends World
             Greenfoot.setWorld(new MainMenu()); 
         }
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.

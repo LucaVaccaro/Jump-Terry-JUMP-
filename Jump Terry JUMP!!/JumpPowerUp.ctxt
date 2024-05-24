@@ -1,13 +1,16 @@
 #BlueJ class context
 comment0.target=JumpPowerUp
 comment1.params=
-comment1.target=JumpPowerUp()
+comment1.target=void\ PowerUp()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ JumpPowerUp\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
-comment2.target=void\ act()
+comment2.target=JumpPowerUp()
 comment3.params=
-comment3.target=void\ checkCollision()
+comment3.target=void\ act()
 comment4.params=
-comment4.target=void\ applyPowerUp()
+comment4.target=void\ checkCollision()
 comment5.params=
-comment5.target=void\ showIndicator()
-numComments=6
+comment5.target=void\ applyPowerUp()
+comment6.params=
+comment6.target=void\ showIndicator()
+numComments=7

@@ -14,7 +14,7 @@ public class Player extends Actor {
     private double verticalVelocity = 0;
     public double chargeTime = 0;
     private double direction = 0;
-<<<<<<< HEAD
+
     public PowerUpSimulator powerUp;
     boolean isVPressed = false;
     public Player()
@@ -22,14 +22,11 @@ public class Player extends Actor {
         image1 = new GreenfootImage("terryNormal.png"); 
         image2 = new GreenfootImage("terryCrouching.png");
     }
-=======
-    
->>>>>>> 2ef59818d1688428cd2d09fc98bbd856011a5a1b
+
     public void act() 
     {
         inputKey();
         applyPhysics();
-<<<<<<< HEAD
         if (Greenfoot.isKeyDown("v")) 
         {
             isVPressed = true;
@@ -44,9 +41,9 @@ public class Player extends Actor {
         {
             powerUp.setLocation(getX(), getY());
         }
-=======
+
         checkPowerUp();
->>>>>>> 2ef59818d1688428cd2d09fc98bbd856011a5a1b
+
     }
     
     private void inputKey() {
@@ -73,11 +70,9 @@ public class Player extends Actor {
         double strength = Math.min(chargeTime, maxJumpStrength);
         verticalVelocity = -strength * 0.75;
         chargeTime = 0;
-<<<<<<< HEAD
+
         
         //Greenfoot.playSound();
-=======
->>>>>>> 2ef59818d1688428cd2d09fc98bbd856011a5a1b
     }
     
     private void jump(double direction) {
