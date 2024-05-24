@@ -66,6 +66,43 @@ public class MyWorld10 extends WorldTrackPlayer
         addObject(ground5,82,330);
         Ground ground6 = new Ground();
         addObject(ground6,15,330);
+        BobTheGator bobTheGator = new BobTheGator();
+        addObject(bobTheGator,509,264);
+        bobTheGator.setLocation(502,145);
+        pipePlatform pipePlatform = new pipePlatform();
+        addObject(pipePlatform,504,200);
+        bobTheGator.setLocation(514,158);
+        pipePlatform pipePlatform2 = new pipePlatform();
+        addObject(pipePlatform2,99,80);
+        bobTheGator.setLocation(518,156);
+        bobTheGator.setLocation(516,135);
+        bobTheGator.setLocation(530,120);
+        bobTheGator.setLocation(530,124);
+        bobTheGator.setLocation(530,129);
+        pipePlatform.setLocation(532,195);
+        LouiseTrapped louiseTrapped = new LouiseTrapped();
+        addObject(louiseTrapped,238,57);
+        pipePlatform2.setLocation(84,176);
+        louiseTrapped.setLocation(106,70);
+        pipePlatform2.setLocation(106,149);
+        pipePlatform.setLocation(327,208);
+        bobTheGator.setLocation(331,141);
+        pipePlatform2.setLocation(575,139);
+        pipePlatform2.setLocation(559,138);
+        louiseTrapped.setLocation(570,84);
+        pipePlatform2.setLocation(603,133);
+        louiseTrapped.setLocation(564,90);
+        removeObject(pipePlatform2);
+        boxPlatform boxPlatform = new boxPlatform();
+        addObject(boxPlatform,492,130);
+        louiseTrapped.setLocation(614,129);
+        boxPlatform boxPlatform2 = new boxPlatform();
+        addObject(boxPlatform2,614,129);
+        louiseTrapped.setLocation(584,128);
+        pipePlatform.setLocation(352,207);
+        removeObject(louiseTrapped);
+        addObject(louiseTrapped,558,63);
+        boxPlatform.setLocation(540,128);
     }
         
 }

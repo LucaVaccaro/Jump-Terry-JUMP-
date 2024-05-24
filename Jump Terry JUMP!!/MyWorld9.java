@@ -66,6 +66,8 @@ public class MyWorld9 extends WorldTrackPlayer
         addObject(metalPlatform2,532,160);
         metalPlatform metalPlatform3 = new metalPlatform();
         addObject(metalPlatform3,137,64);
+        metalPlatform2.setLocation(494,188);
+        metalPlatform2.setLocation(512,204);
     }
         
 }

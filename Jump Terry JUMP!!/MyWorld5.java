@@ -73,6 +73,9 @@ public class MyWorld5 extends WorldTrackPlayer
         pipePlatform pipePlatform = new pipePlatform();
         addObject(pipePlatform,510,74);
         removeObject(metalPlatform3);
+        pipePlatform pipePlatform2 = new pipePlatform();
+        addObject(pipePlatform2,622,73);
+        pipePlatform2.setLocation(604,74);
     }
         
 }

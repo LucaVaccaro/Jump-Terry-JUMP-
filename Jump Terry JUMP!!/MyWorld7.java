@@ -63,6 +63,10 @@ public class MyWorld7 extends WorldTrackPlayer
         addObject(pipePlatform,540,63);
         pipePlatform.setLocation(564,53);
         pipePlatform.setLocation(113,63);
+        Box box = new Box();
+        addObject(box,25,333);
+        metalPlatform metalPlatform = new metalPlatform();
+        addObject(metalPlatform,439,235);
     }
         
 }
