@@ -75,6 +75,8 @@ public class MyWorld4 extends WorldTrackPlayer
         ladder3.setLocation(538,282);
 
         jumpPowerUp.setLocation(529,202);
+        boxPlatform boxPlatform = new boxPlatform();
+        addObject(boxPlatform,579,353);
     }
         
 }

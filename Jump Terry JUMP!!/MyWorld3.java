@@ -174,5 +174,15 @@ public class MyWorld3 extends WorldTrackPlayer
         addObject(box2,300,176);
         Box box3 = new Box();
         addObject(box3,81,79);
+        removeObject(box2);
+        pipePlatform pipePlatform = new pipePlatform();
+        addObject(pipePlatform,312,194);
+        Ladder ladder3 = new Ladder();
+        addObject(ladder3,85,281);
+        pipePlatform.setLocation(318,175);
+        metalPlatform metalPlatform = new metalPlatform();
+        addObject(metalPlatform,601,72);
+        metalPlatform.setLocation(588,74);
+        removeObject(metalPlatform);
     }
 }

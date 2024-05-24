@@ -36,10 +36,20 @@ public class Player extends Actor {
     }
     
     private void inputKey() {
-        if (Greenfoot.isKeyDown("a")) {
+        if (Greenfoot.isKeyDown("a")) 
+        {
             direction += -0.5;
-        } else if (Greenfoot.isKeyDown("d")) {
+            if(direction <= -90)
+            {
+                direction = 0;
+            }
+        } else if (Greenfoot.isKeyDown("d")) 
+        {
             direction += 0.5;
+            if(direction >= 90)
+            {
+                direction = 0;
+            }
         }
         if (Greenfoot.isKeyDown("space")) {
             if (!isJumping) {
