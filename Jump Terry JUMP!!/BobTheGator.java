@@ -14,6 +14,14 @@ public class BobTheGator extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+    checkCollision();  
+    }
+    
+    private void checkCollision() {
+        if (isTouching(Player.class)) {
+            Greenfoot.setWorld(new VictoryScreen());
+            MyWorld.stopMusic();
+            Greenfoot.playSound("jump_Sound.wav");
+        }
     }
 }

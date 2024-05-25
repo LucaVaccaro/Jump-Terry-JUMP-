@@ -27,7 +27,8 @@ public class StartButton extends Display
         if (Greenfoot.mouseClicked(this))
         {
             Greenfoot.setWorld(new MyWorld()); 
+            MainMenu.stopMusic();  
         }
-
+        
         }
     }

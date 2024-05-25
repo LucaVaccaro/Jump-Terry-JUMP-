@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 /**
  * Write a description of class SplashScreen here.
@@ -15,7 +15,7 @@ public class SplashScreen extends World
      */
     public SplashScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        
         super(800, 360, 1); 
         showText("420-141-VA GAME PROGRAMMING 1", getWidth()/2, 60);
         showText("Team Members: Sean Lussier, Luca Vaccaro, Andrew Godward, Dilpreet Singh", getWidth()/2, 85);

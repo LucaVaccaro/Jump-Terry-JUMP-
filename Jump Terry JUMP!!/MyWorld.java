@@ -4,6 +4,7 @@ public class MyWorld extends WorldTrackPlayer
 {
     private GreenfootImage powerUpIndicatorImage;
     private Actor powerUpIndicator;
+    private static GreenfootSound worldMusic;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -11,15 +12,22 @@ public class MyWorld extends WorldTrackPlayer
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        
         super(); 
+        worldMusic = new GreenfootSound("lordOfDestruction.wav"); 
         prepare();
+        worldMusic.playLoop();
     }
     public MyWorld(int x, int y, Player p )
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        
         super(x,y,p); 
         prepare();
+    }
+    
+    public static void stopMusic()
+    {
+        worldMusic.stop();
     }
     
     public void checkPlayerPosition()
@@ -32,20 +40,16 @@ public class MyWorld extends WorldTrackPlayer
     }
     
     public void deactivatePowerUp() {
-        // Check if the player has a power-up and deactivate it if necessary
+        
         if (player != null && player.getMaxJumpStrength() > Player.MAX_JUMP_STRENGTH) {
             player.setMaxJumpStrength(Player.MAX_JUMP_STRENGTH);
-            // Optionally, remove the power-up indicator from the world
+            
             if (powerUpIndicator != null) {
                 removeObject(powerUpIndicator);
             }
         }
     }
     
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
     private void prepare()
     {
 
