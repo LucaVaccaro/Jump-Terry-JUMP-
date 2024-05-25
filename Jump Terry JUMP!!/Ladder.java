@@ -2,11 +2,11 @@ import greenfoot.*;
 
 public class Ladder extends Ground {
     public Ladder() {
-        GreenfootImage image = new GreenfootImage("Ladder.png"); // Adjust width and height as needed
+        GreenfootImage image = new GreenfootImage("Ladder.png"); 
         setImage(image);
     }
     
-    public void act() {
-        // Add any additional behavior for the ground if needed
+    public void act() 
+    {
     }
 }

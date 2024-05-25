@@ -9,13 +9,11 @@ public class MyWorld2 extends WorldTrackPlayer
      */
     public MyWorld2()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(); 
         prepare();
     }
     public MyWorld2(int x , int y, Player p)
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(x,y,p); 
         prepare();
     }
@@ -38,10 +36,8 @@ public class MyWorld2 extends WorldTrackPlayer
     }
     
     public void deactivatePowerUp() {
-        // Check if the player has a power-up and deactivate it if necessary
         if (player != null && player.getMaxJumpStrength() > Player.MAX_JUMP_STRENGTH) {
             player.setMaxJumpStrength(Player.MAX_JUMP_STRENGTH);
-            // Optionally, remove the power-up indicator from the world
             if (getObjects(PowerUpIndicator.class).size() > 0) {
                 removeObjects(getObjects(PowerUpIndicator.class));
             }

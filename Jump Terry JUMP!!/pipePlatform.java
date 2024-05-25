@@ -6,7 +6,7 @@ public class pipePlatform extends Ground {
         setImage(image);
     }
     
-    public void act() {
-        
+    public void act() 
+    {  
     }
 }

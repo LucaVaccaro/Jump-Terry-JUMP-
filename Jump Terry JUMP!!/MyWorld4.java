@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 /**
  * Write a description of class MyWorld4 here.
@@ -15,13 +15,11 @@ public class MyWorld4 extends WorldTrackPlayer
      */
     public MyWorld4()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(); 
         prepare();
     }
     public MyWorld4(int x , int y, Player p)
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(x,y,p); 
         prepare();
     }
@@ -44,10 +42,8 @@ public class MyWorld4 extends WorldTrackPlayer
     }
     
     public void deactivatePowerUp() {
-        // Check if the player has a power-up and deactivate it if necessary
         if (player != null && player.getMaxJumpStrength() > Player.MAX_JUMP_STRENGTH) {
             player.setMaxJumpStrength(Player.MAX_JUMP_STRENGTH);
-            // Optionally, remove the power-up indicator from the world
             if (getObjects(PowerUpIndicator.class).size() > 0) {
                 removeObjects(getObjects(PowerUpIndicator.class));
             }

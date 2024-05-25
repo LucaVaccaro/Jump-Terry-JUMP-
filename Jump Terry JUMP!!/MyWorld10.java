@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 /**
  * Write a description of class MyWorld10 here.
@@ -39,7 +39,6 @@ public class MyWorld10 extends WorldTrackPlayer
     
         if (player != null && player.getMaxJumpStrength() > Player.MAX_JUMP_STRENGTH) {
             player.setMaxJumpStrength(Player.MAX_JUMP_STRENGTH);
-    
             if (getObjects(PowerUpIndicator.class).size() > 0) {
                 removeObjects(getObjects(PowerUpIndicator.class));
             }
@@ -52,7 +51,6 @@ public class MyWorld10 extends WorldTrackPlayer
      */
     private void prepare()
     {
-
         Ground ground = new Ground();
         addObject(ground,579,330);
         Ground ground2 = new Ground();

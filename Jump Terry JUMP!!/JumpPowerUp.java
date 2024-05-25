@@ -3,7 +3,7 @@ import greenfoot.*;
 public class JumpPowerUp extends PowerUpSimulator
 {
     private Player player;
-    private GreenfootImage indicatorImage; // Image for the indicator
+    private GreenfootImage indicatorImage; 
     
 
     /**
@@ -16,9 +16,9 @@ public class JumpPowerUp extends PowerUpSimulator
     }
     public JumpPowerUp() 
     {
-        GreenfootImage image = new GreenfootImage("Soda_power_up.png"); // Assuming "jump_powerup.png" is the image file for the power-up
+        GreenfootImage image = new GreenfootImage("Soda_power_up.png"); 
         setImage(image);
-        indicatorImage = new GreenfootImage("walking_cane.png"); // Assuming "powerup_indicator.png" is the image file for the indicator
+        indicatorImage = new GreenfootImage("walking_cane.png"); 
 
     }
     
@@ -45,6 +45,6 @@ public class JumpPowerUp extends PowerUpSimulator
     
     private void showIndicator() {
         PowerUpIndicator indicator = new PowerUpIndicator(indicatorImage);
-        getWorld().addObject(indicator, player.getX(), player.getY()); // Adjust the position of the indicator to the player's position
+        getWorld().addObject(indicator, player.getX(), player.getY()); 
     }
 }

@@ -6,7 +6,7 @@ public class Box extends Ground {
         setImage(image);
     }
     
-    public void act() {
-        
+    public void act() 
+    {
     }
 }

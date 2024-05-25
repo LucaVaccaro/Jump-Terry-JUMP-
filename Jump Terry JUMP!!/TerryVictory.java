@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 /**
  * Write a description of class TerryVictory here.
@@ -14,6 +14,5 @@ public class TerryVictory extends Display
      */
     public void act()
     {
-        // Add your action code here.
     }
 }

@@ -6,7 +6,7 @@ public class Ground extends GroundPhysics {
         setImage(image);
     }
     
-    public void act() {
-        // Add any additional behavior for the ground if needed
+    public void act() 
+    {
     }
 }

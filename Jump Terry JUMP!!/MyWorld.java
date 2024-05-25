@@ -12,7 +12,6 @@ public class MyWorld extends WorldTrackPlayer
      */
     public MyWorld()
     {    
-        
         super(); 
         worldMusic = new GreenfootSound("lordOfDestruction.wav"); 
         prepare();
@@ -20,7 +19,6 @@ public class MyWorld extends WorldTrackPlayer
     }
     public MyWorld(int x, int y, Player p )
     {    
-        
         super(x,y,p); 
         prepare();
     }
@@ -52,7 +50,6 @@ public class MyWorld extends WorldTrackPlayer
     
     private void prepare()
     {
-
         Ground ground = new Ground();
         addObject(ground,117,360);
         ground.setLocation(83,360);

@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 /**
  * Write a description of class WorldKeepPlayer here.
@@ -15,7 +15,6 @@ public class WorldTrackPlayer extends World
      */
     public WorldTrackPlayer(int x , int y, Player p)
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(640, 360, 1); 
         player = p;
         addObject(player,x,y);
@@ -23,7 +22,6 @@ public class WorldTrackPlayer extends World
     }
     public WorldTrackPlayer()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(640, 360, 1); 
         player = new Player();
         addObject(player,95,317);

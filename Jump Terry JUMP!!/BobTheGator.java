@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 /**
  * Write a description of class BobTheGator here.
@@ -14,7 +14,7 @@ public class BobTheGator extends Actor
      */
     public void act()
     {
-    checkCollision();  
+        checkCollision();  
     }
     
     private void checkCollision() {

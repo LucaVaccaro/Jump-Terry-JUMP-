@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 /**
  * Write a description of class LouiseTrapped here.
@@ -14,6 +14,5 @@ public class LouiseTrapped extends Actor
      */
     public void act()
     {
-        // Add your action code here.
     }
 }

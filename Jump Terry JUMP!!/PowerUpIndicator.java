@@ -14,7 +14,7 @@ public class PowerUpIndicator extends Actor
     private void followPlayer() {
         Actor player = getWorld().getObjects(Player.class).get(0);
         if (player != null) {
-            setLocation(player.getX(), player.getY()); // Position the indicator in the middle of the player
+            setLocation(player.getX(), player.getY());  
         }
     }
 }

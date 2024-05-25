@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
 /**
  * Write a description of class MyWorld3 here.
@@ -15,13 +15,11 @@ public class MyWorld3 extends WorldTrackPlayer
      */
     public MyWorld3()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(); 
         prepare();
     }
     public MyWorld3(int x , int y, Player p)
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(x,y,p); 
         prepare();
     }
@@ -43,10 +41,8 @@ public class MyWorld3 extends WorldTrackPlayer
     }
     
     public void deactivatePowerUp() {
-        
         if (player != null && player.getMaxJumpStrength() > Player.MAX_JUMP_STRENGTH) {
             player.setMaxJumpStrength(Player.MAX_JUMP_STRENGTH);
-            
             if (getObjects(PowerUpIndicator.class).size() > 0) {
                 removeObjects(getObjects(PowerUpIndicator.class));
             }
